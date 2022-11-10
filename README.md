@@ -25,4 +25,4 @@ You now have two choices:
 
 ## Viewing stories online
 
-This site is automatically deployed via GitHub Pages and available at [https://chromedevtools.github.io/performance-stories].
+This site is automatically deployed via GitHub Pages and available at https://chromedevtools.github.io/performance-stories.

@@ -1,0 +1,17 @@
+{
+  "name": "performance-stories",
+  "private": true,
+  "version": "0.0.1",
+  "description": "Example use cases for performance tooling",
+  "scripts": {
+    "serve": "statikk --port=8787"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ChromeDevTools/performance-stories.git"
+  },
+  "homepage": "https://github.com/ChromeDevTools/performance-stories#readme",
+  "devDependencies": {
+    "statikk": "^2.2.0"
+  }
+}

@@ -11,3 +11,8 @@ btn.addEventListener("click", () => {
   console.log(fibonacci(Number(params.get("x"))));
   btn.style.backgroundColor = "red";
 });
+
+const input = document.querySelector('input[type="text"]');
+input.addEventListener('input', () => {
+  console.log(fibonacci(Number(params.get('x'))));
+});

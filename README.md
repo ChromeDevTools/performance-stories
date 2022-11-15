@@ -23,6 +23,10 @@ You now have two choices:
 2. Run `npm serve {story-name}`, which will run a server for that story and
    visit `http://localhost:8787` to view that story.
 
+Note: by default the server is only available on `localhost` and not exposed to
+the network. You can run `npm run serve-network` to have it exposed to the
+network.
+
 ## Viewing stories online
 
 This site is automatically deployed via GitHub Pages and available at https://chromedevtools.github.io/performance-stories.

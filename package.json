@@ -4,7 +4,8 @@
   "version": "0.0.1",
   "description": "Example use cases for performance tooling",
   "scripts": {
-    "serve": "statikk --port=8787"
+    "serve": "statikk --port=8787",
+    "serve-network": "statikk --port=8787 --expose"
   },
   "repository": {
     "type": "git",

@@ -16,11 +16,11 @@ First, clone the repository and run `npm install`.
 
 You now have two choices:
 
-1. Run `npm serve`, which will run a server in this repository's root, and
+1. Run `npm run serve`, which will run a server in this repository's root, and
    visit `http://localhost:8787/{story-name}/index.html`. For example,
    `http://localhost:8787/text-based-lcp/index.html`.
 
-2. Run `npm serve {story-name}`, which will run a server for that story and
+2. Run `npm run serve {story-name}`, which will run a server for that story and
    visit `http://localhost:8787` to view that story.
 
 Note: by default the server is only available on `localhost` and not exposed to

@@ -5,7 +5,8 @@
   "description": "Example use cases for performance tooling",
   "scripts": {
     "serve": "statikk --port=8787",
-    "serve-network": "statikk --port=8787 --expose"
+    "serve-network": "statikk --port=8787 --expose",
+    "genindex": "node generate-index.mjs"
   },
   "repository": {
     "type": "git",

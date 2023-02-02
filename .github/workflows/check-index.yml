@@ -1,7 +1,7 @@
 name: check-index-up-to-date
 on: [push]
 jobs:
-  check-bats-version:
+  validate:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v3

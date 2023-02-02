@@ -1,0 +1,28 @@
+
+import fs from 'node:fs';
+import path from 'node:path';
+
+const dirs = fs.readdirSync('./', {withFileTypes: true})
+  .filter(d => d.isDirectory())
+  .filter(d => !d.name.startsWith('.') && d.name !== 'node_modules');
+
+const listItems = dirs.map(dirent => {
+  const dirname = dirent.name;
+  console.assert(fs.statSync(`${dirname}/index.html`)); // throw if no index.html
+  return `<li><a href="${dirname}/index.html">${dirname}</li>`
+});
+
+const html = `
+<!doctype html>
+<style>
+  head, title { display: block; font-weight: bold; margin: 8px; }
+  html { font-size: 200%}
+</style>
+<title>performance-stories index</title>
+<ul>
+  ${listItems.join('\n')}
+</ul>
+`;
+
+fs.writeFileSync('index.html', html, 'utf-8');
+console.log('Wrote:', `${process.cwd()}/index.html`);

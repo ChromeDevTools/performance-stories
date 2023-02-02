@@ -10,6 +10,8 @@ need to add more context, create a `README.md` file within that folder.
 Each story should have an `index.html` file, and can contain any other static
 assets that are required.
 
+Run `npm run genindex` afterwards to update the landing page.
+
 ## Running a story locally
 
 First, clone the repository and run `npm install`.

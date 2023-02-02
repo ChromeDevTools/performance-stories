@@ -1,6 +1,7 @@
 
 import fs from 'node:fs';
 import path from 'node:path';
+import {execSync} from 'node:child_process'
 
 const dirs = fs.readdirSync('./', {withFileTypes: true})
   .filter(d => d.isDirectory())
@@ -26,3 +27,12 @@ const html = `
 
 fs.writeFileSync('index.html', html, 'utf-8');
 console.log('Wrote:', `${process.cwd()}/index.html`);
+
+if(process.argv.includes('--validate')) {
+  const status = execSync('git status --porcelain', {encoding:'utf8'})
+  if(status.trim().length > 0) {
+    console.error('ERROR: Unexpected git diff after validating index')
+    console.error('Make sure you have run `npm run genindex` to update the index page.')
+    process.exit(1)
+  }
+}

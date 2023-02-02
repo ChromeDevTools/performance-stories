@@ -6,7 +6,8 @@
   "scripts": {
     "serve": "statikk --port=8787",
     "serve-network": "statikk --port=8787 --expose",
-    "genindex": "node generate-index.mjs"
+    "genindex": "node generate-index.mjs",
+    "validate-index": "node generate-index.mjs --validate"
   },
   "repository": {
     "type": "git",

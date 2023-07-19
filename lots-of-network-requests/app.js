@@ -1,6 +1,6 @@
 import('./load.js').then(module => {
   let size = 100
-  while(size < 150) {
+  while(size < 120) {
     module.insertImage(size++);
   }
   import('./some-script.js')

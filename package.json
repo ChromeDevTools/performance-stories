@@ -7,7 +7,9 @@
     "serve": "statikk --port=8787",
     "serve-network": "statikk --port=8787 --expose",
     "genindex": "node generate-index.mjs",
-    "validate-index": "node generate-index.mjs --validate"
+    "validate-index": "node generate-index.mjs --validate",
+    "validate-format": "prettier --check .",
+    "format": "prettier --write ."
   },
   "repository": {
     "type": "git",
@@ -15,6 +17,7 @@
   },
   "homepage": "https://github.com/ChromeDevTools/performance-stories#readme",
   "devDependencies": {
+    "prettier": "^3.0.0",
     "statikk": "^2.2.0"
   }
 }

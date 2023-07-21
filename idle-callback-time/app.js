@@ -6,9 +6,9 @@ function fibonacci(num) {
 
 function run() {
   requestIdleCallback(() => {
-  fibonacci(35)
+    fibonacci(35);
     document.body.style.background = 'lightblue';
-  })
+  });
 }
 
-run()
+run();

@@ -1,3 +1,3 @@
-import('./load.js').then(module => {
+import('./load.js').then((module) => {
   module.insertImage();
 });

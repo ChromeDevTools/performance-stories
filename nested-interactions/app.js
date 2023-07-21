@@ -7,7 +7,7 @@ function fibonacci(num) {
 const input = document.querySelector('#text');
 
 input.addEventListener('keydown', (e) => {
-  e.preventDefault()
+  e.preventDefault();
   fibonacci(30);
-  input.value += e.key
-})
+  input.value += e.key;
+});

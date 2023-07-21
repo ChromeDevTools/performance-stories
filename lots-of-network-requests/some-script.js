@@ -1,1 +1,1 @@
-console.log('some script was loaded')
+console.log('some script was loaded');

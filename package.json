@@ -8,7 +8,7 @@
     "serve-network": "statikk --port=8787 --expose",
     "genindex": "node generate-index.mjs",
     "validate-index": "node generate-index.mjs --validate",
-    "validate-format": "npx prettier --check .",
+    "validate-format": "prettier --check .",
     "format": "prettier --write ."
   },
   "repository": {

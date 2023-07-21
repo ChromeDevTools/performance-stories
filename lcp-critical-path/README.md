@@ -7,4 +7,3 @@ The path is:
 ```
 index.html => app.js => load.js => LCP image
 ```
-

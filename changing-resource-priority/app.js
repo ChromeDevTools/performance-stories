@@ -1,1 +1,1 @@
-  document.querySelector('.hero').style.border = "1px solid red"
+document.querySelector('.hero').style.border = '1px solid red';

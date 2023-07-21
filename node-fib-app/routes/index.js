@@ -7,9 +7,9 @@ function fibonacci(num) {
 }
 
 /* GET home page. */
-router.get('/num/:num', function(req, res, next) {
-  const result = fibonacci(parseInt(req.params.num))
-  res.render('index', {input: req.params.num, result});
+router.get('/num/:num', function (req, res, next) {
+  const result = fibonacci(parseInt(req.params.num));
+  res.render('index', { input: req.params.num, result });
 });
 
 module.exports = router;

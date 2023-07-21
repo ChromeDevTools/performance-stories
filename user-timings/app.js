@@ -5,12 +5,11 @@ setTimeout(() => {
 
 setTimeout(() => {
   performance.measure('second measure', 'mark1');
-}, 600)
+}, 600);
 
 setTimeout(() => {
   const mark3 = performance.mark('mark3');
-  setTimeout(()=> {
+  setTimeout(() => {
     performance.measure('third measure', 'mark3');
   }, 2000);
-}, 1000)
-
+}, 1000);

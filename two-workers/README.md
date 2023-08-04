@@ -1,7 +1,3 @@
-# user-timings
+# two-workers
 
-This example creates some performance measures:
-
-1. `first measure` from 0-200ms
-2. `second measure` from 0-600ms
-3. `third measure` from 1000-2000ms
+Runs two instances of the same worker, that both calculate a Fibbonaci number.

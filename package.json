@@ -9,7 +9,8 @@
     "genindex": "node generate-index.mjs",
     "validate-index": "node generate-index.mjs --validate",
     "validate-format": "prettier --check .",
-    "format": "prettier --write ."
+    "format": "prettier --write .",
+    "postinstall": "cd minified-with-source-maps && make build"
   },
   "repository": {
     "type": "git",
@@ -17,6 +18,7 @@
   },
   "homepage": "https://github.com/ChromeDevTools/performance-stories#readme",
   "devDependencies": {
+    "esbuild": "^0.19.2",
     "prettier": "^3.0.0",
     "statikk": "^2.2.0"
   }

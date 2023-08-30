@@ -1,0 +1,7 @@
+{
+  "version": 3,
+  "sources": ["load.js", "app.js"],
+  "sourcesContent": ["export function insertImage() {\n  const img = 'https://placehold.co/500x500';\n  const image = new Image();\n  image.src = img;\n  document.getElementById('app').appendChild(image);\n}\n\nexport async function insertText() {\n  await new Promise((r) => setTimeout(r, 500));\n  const p = document.createElement('p');\n  p.innerText = 'Hello, world!';\n  document.getElementById('app').appendChild(p);\n}\n", "import { insertImage, insertText } from './load.js';\ninsertImage();\ninsertText();\n"],
+  "mappings": "MAAO,SAASA,GAAc,CAC5B,IAAMC,EAAM,+BACNC,EAAQ,IAAI,MAClBA,EAAM,IAAMD,EACZ,SAAS,eAAe,KAAK,EAAE,YAAYC,CAAK,CAClD,CAEA,eAAsBC,GAAa,CACjC,MAAM,IAAI,QAASC,GAAM,WAAWA,EAAG,GAAG,CAAC,EAC3C,IAAMC,EAAI,SAAS,cAAc,GAAG,EACpCA,EAAE,UAAY,gBACd,SAAS,eAAe,KAAK,EAAE,YAAYA,CAAC,CAC9C,CCXAC,EAAY,EACZC,EAAW",
+  "names": ["insertImage", "img", "image", "insertText", "r", "p", "insertImage", "insertText"]
+}

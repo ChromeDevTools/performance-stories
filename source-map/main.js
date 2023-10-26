@@ -1,6 +1,5 @@
 function myTopFunction() {
   helperFunction();
-  extraCall(true);
   console.log('done');
 }
 
@@ -18,18 +17,4 @@ function myBottomFunction(breakDuration) {
   while (performance.now() - started < breakDuration);
 }
 
-function extraCall(shouldThrowError) {
-  if (!shouldThrowError) return;
-  throwError();
-}
-
-function throwError() {
-  function getRandomNumber() {
-    return Math.random();
-  }
-  myBottomFunction(1000);
-  if (getRandomNumber() * 5 > 0) throw Error();
-}
-
 myTopFunction();
-extraCall(false);

@@ -18,17 +18,23 @@ async function taskWithSubTasks() {
   spin(100);
 
   const backgroundController = new TaskController();
-  const backgroundSubtask = scheduler.postTask(() => {
-    spin(500);
-  }, {priority: 'background', signal: backgroundController.signal});
+  const backgroundSubtask = scheduler.postTask(
+    () => {
+      spin(500);
+    },
+    { priority: 'background', signal: backgroundController.signal },
+  );
 
   spin(50);
 
   // Cancel background task in higher-priority task.
-  const userBlockingSubTask = scheduler.postTask(() => {
-    spin(100);
-    backgroundController.abort('cancel background work')
-  }, {priority: 'user-blocking'});
+  const userBlockingSubTask = scheduler.postTask(
+    () => {
+      spin(100);
+      backgroundController.abort('cancel background work');
+    },
+    { priority: 'user-blocking' },
+  );
 
   spin(100);
   return Promise.allSettled([backgroundSubtask, userBlockingSubTask]);
@@ -40,7 +46,7 @@ async function taskWithSubTasks() {
  * └┘     └───────────┌┐
  * └─────────────────►C│
  *                    └┘
-*/
+ */
 const selfCancellingController = new TaskController();
 async function selfCancellingTask() {
   spin(100);
@@ -48,5 +54,8 @@ async function selfCancellingTask() {
   selfCancellingController.abort('just get rid of me');
 }
 
-await scheduler.postTask(taskWithSubTasks, {delay: 200});
-await scheduler.postTask(selfCancellingTask, {delay: 100, signal: selfCancellingController.signal});
+await scheduler.postTask(taskWithSubTasks, { delay: 200 });
+await scheduler.postTask(selfCancellingTask, {
+  delay: 100,
+  signal: selfCancellingController.signal,
+});

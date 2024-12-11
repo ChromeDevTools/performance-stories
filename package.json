@@ -21,5 +21,8 @@
     "esbuild": "^0.19.2",
     "prettier": "^3.0.0",
     "statikk": "^2.2.0"
+  },
+  "dependencies": {
+    "preact": "^10.25.1"
   }
 }

@@ -1,10 +1,32 @@
 <html>
   <head>
     <title>Performance and source maps</title>
-    <style></style>
+  <style>
+    body {display: flex; gap: 20px;}
+
+    #app {width: 500px;}
+
+    .instructions {
+      background-color: #FFD580;
+      padding: 4px 10px;
+      height: 400px;
+      border-radius: 4px;
+      font-size: 18px;
+
+      pre {
+        font-weight: bold;
+      }
+    }
+  </style>
   </head>
   <body>
     <div id="app"></div>
+    <div class="instructions">
+      <p>
+        <strong>IMPORTANT</strong> if you are running this locally, ensure you have built the bundle! Navigate to this directory and run <code>make build</code>. Otherwise, this example will not work.
+      </p>
+      <p>This bundle is made up of <code>Preact</code> alongside some source code. It's all bundled into <code>bundle.js</code> but it ships a sourcemap.</p>
+    </div>
     <script src="bundle.js"></script>
   </body>
 </html>

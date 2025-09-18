@@ -32,3 +32,23 @@ setTimeout(() => {
     },
   });
 }, 2000);
+
+performance.mark('Mark event 1', {
+  startTime: 1500,
+  detail: {
+    devtools: {
+      track: 'My Track',
+      trackGroup: 'My Track Group',
+    },
+  },
+});
+
+performance.mark('Mark event 2', {
+  startTime: 2500,
+  detail: {
+    devtools: {
+      track: 'My Track',
+      trackGroup: 'My Track Group',
+    },
+  },
+});

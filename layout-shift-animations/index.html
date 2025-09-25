@@ -1,0 +1,36 @@
+<html>
+  <head>
+    <title>Layout Shift from non-composited animation on load</title>
+    <style>
+      .box {
+        height: 100px;
+        width: 100px;
+      }
+      #red {
+        background-color: red;
+        animation: 0.2s linear 0s 1 forwards change-height;
+      }
+      @keyframes change-height {
+        from {
+          height: 100px;
+        }
+        to {
+          height: 300px;
+        }
+      }
+      p {
+        font-family: sans-serif;
+      }
+    </style>
+  </head>
+  <body>
+    <div id="red" class="box"></div>
+    <p>This is some text content below the animated box.</p>
+    <p>
+      When the red box above changes height, this text will be pushed down,
+      causing a layout shift.
+    </p>
+    <p>This makes the impact of the non-composited animation very clear.</p>
+    <script src="app.js"></script>
+  </body>
+</html>

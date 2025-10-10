@@ -13,7 +13,7 @@ fetch('scripts/fetched.js')
   });
 
 // Dynamic import within a module
-import('./scripts/another-module.js').then((module) => {
+import('./scripts/lazy-import-module.js').then((module) => {
   console.log('dynamically imported module loaded', module);
 });
 

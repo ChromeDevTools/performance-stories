@@ -1,0 +1,34 @@
+<html>
+  <head>
+    <title>Resource initiators</title>
+
+    <!-- Stylesheets -->
+    <link rel="stylesheet" href="stylesheets/style.css">
+    <style>
+      body { color: green; }
+    </style>
+
+    <!-- Preloads -->
+    <link rel="preload" href="images/preloaded.png" as="image">
+    <link rel="preload" href="fonts/preloaded.ttf" as="font" type="font/ttf" crossorigin>
+    <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
+
+    <!-- Scripts -->
+    <script src="scripts/standard.js"></script>
+    <script src="scripts/async.js" async></script>
+    <script src="scripts/defer.js" defer></script>
+    <script>console.log('inline script executed');</script>
+    <script type="module" src="scripts/module.js"></script>
+    <script type="module" src="scripts/module-async.js" async></script>
+
+  </head>
+  <body>
+    <h1>Resource Initiator Examples</h1>
+
+    <!-- Images -->
+    <img src="images/standard.png">
+    <div class="bg-image"></div>
+
+    <script src="app.js"></script>
+  </body>
+</html>

@@ -1,0 +1,17 @@
+@import url('import.css');
+
+@font-face {
+  font-family: 'MyFont';
+  src: url('../fonts/font-face.ttf') format('truetype');
+}
+
+body {
+  font-family: 'MyFont', sans-serif;
+}
+
+.bg-image {
+  background-image: url('../images/background.png');
+  width: 200px;
+  height: 200px;
+  border: 1px solid black;
+}

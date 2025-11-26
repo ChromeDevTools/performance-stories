@@ -1,6 +1,7 @@
 import { h, render } from 'preact';
 import { useEffect, useRef, useState } from 'preact/hooks';
 import { loadImage } from './load.js';
+import './fib.js';
 
 const app = h(MyApp, null, '');
 
